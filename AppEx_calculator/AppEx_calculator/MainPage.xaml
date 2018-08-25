@@ -3,12 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppEx_calculator"
              x:Class="AppEx_calculator.MainPage">
+    
+    <!--định nghĩa style chung-->
+    <ContentPage.Resources >
+        <ResourceDictionary >
+            <Style TargetType="Button" x:Key="BlueBackGround" >
+                <Setter Property="BackgroundColor" Value="#0288D1" />
+                <Setter Property="TextColor"  Value="White"  />
+                <Setter Property="FontSize"   Value="Large"   />
+            </Style>
+            <Style TargetType="Button" x:Key="OrangeBackGround" >
+                <Setter Property="BackgroundColor" Value="#D32F2F" />
+                <Setter Property="TextColor"  Value="White"  />
+                <Setter Property="FontSize"   Value="Large"   />
+            </Style>
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+    
+    <Grid RowSpacing="1" ColumnSpacing="1">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="200" ></RowDefinition>
+            <RowDefinition  ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Entry Placeholder="Result here" HorizontalTextAlignment="End" VerticalOptions="End" 
+               FontAttributes="Bold" FontSize="40" 
+               Grid.Row="0" Grid.ColumnSpan="4" />
+        
+        <!--sử dụng style đã định nghĩa-->
+        <Button Text="Cd" 
+                Style="{StaticResource BlueBackGround}" 
+                Grid.Row="1" Grid.Column="0"/>
+        <Button Text="+/-"  
+                Style="{StaticResource BlueBackGround}" 
+                Grid.Row="1" Grid.Column="1"/>
+        <Button Text="%"  
+                Style="{StaticResource BlueBackGround}" 
+                Grid.Row="1" Grid.Column="2"/>
+        <Button Text="DIV"  
+                Style="{StaticResource OrangeBackGround}"  
+                Grid.Row="1" Grid.Column="3"/>
+
+        <Button Text="7" Grid.Row="2" Grid.Column="0"/>
+        <Button Text="8" Grid.Row="2" Grid.Column="1"/>
+        <Button Text="9" Grid.Row="2" Grid.Column="2"/>
+        <Button Text="*" Grid.Row="2" Grid.Column="3"/>
+
+        <Button Text="4" Grid.Row="3" Grid.Column="0"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2"/>
+        <Button Text="/" Grid.Row="3" Grid.Column="3"/>
+
+        <Button Text="1" Grid.Row="4" Grid.Column="0"/>
+        <Button Text="2" Grid.Row="4" Grid.Column="1"/>
+        <Button Text="3" Grid.Row="4" Grid.Column="2"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3"/>
+
+        <Button Text="0" Grid.Row="5" Grid.ColumnSpan ="2"/>
+        <Button Text="." Grid.Row="5" Grid.Column="2"/>
+        <Button Text="=" Grid.Row="5" Grid.Column="3"/>
+        
+    </Grid>
 
 </ContentPage>

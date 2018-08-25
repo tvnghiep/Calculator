@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AppEx_calculator
 {
@@ -9,9 +10,15 @@ namespace AppEx_calculator
     {
         public App()
         {
+
+            // Initialize Live Reload.
+
+
+
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage  = new pLogin();
+            MainPage = new NavigationPage( new pLogin());
         }
 
         protected override void OnStart()

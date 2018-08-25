@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Details"
+             x:Class="AppEx_calculator.pList_sub">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblName"></Label>
+            <Label x:Name="lblTitle"></Label>
+            <Label x:Name="lblPhoneNumber"></Label>
+            <Label x:Name="lblAddress"></Label>
+            <Image x:Name="img1" ></Image>
+            <Button Text="CALL" Clicked="PhoneClicked"></Button>
+            <Button Text="MSG" Clicked="MsgClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
